@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+@using TatoSen.Model
+@model List<Sentence>
+
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Sentence id</th>
+            <th>Text</th>
+            <th>Pack id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.sentence_id</th>
+                <td>@item.text</td>
+                <td>@item.pack_id</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
