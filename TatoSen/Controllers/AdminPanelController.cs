@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TatoSen.Data;
-using TatoSen.Model;
+using DataAccessLayer.Data;
+using EntityLayer.Model;
 
 namespace TatoSen.Controllers
 {

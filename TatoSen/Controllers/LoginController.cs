@@ -10,8 +10,8 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using TatoSen.Data;
-using TatoSen.Model;
+using DataAccessLayer.Data;
+using EntityLayer.Model;
 
 namespace TatoSen.Controllers
 {

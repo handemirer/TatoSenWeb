@@ -1,0 +1,19 @@
+﻿@using EntityLayer.Constant
+@using EntityLayer.Model
+@model User
+
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Country Code (@Model.country_code)
+    </button>
+    <div class="dropdown-menu" aria-labelledby="Select Country Code">
+        @{
+            foreach (string item in CountryCodes.COUNTYR_CODES)
+            {
+                <a class="dropdown-item" href='@Url.Action("UpdateCountrtCode", "Profile",new { cc = @item})'>@item</a>
+            }
+        }
+
+    </div>
+</div>

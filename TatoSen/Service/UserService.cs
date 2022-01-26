@@ -7,8 +7,8 @@ using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using TatoSen.Data;
-using TatoSen.Model;
+using DataAccessLayer.Data;
+using EntityLayer.Model;
 using TatoSen.Models;
 
 namespace Tatosen.Services

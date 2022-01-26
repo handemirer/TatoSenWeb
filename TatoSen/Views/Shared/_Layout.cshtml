@@ -1,6 +1,6 @@
 ﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor;
 @using Microsoft.AspNetCore.Http;
-@using TatoSen.Data;
+@using DataAccessLayer.Data;
 
 @{
     string userId = null;
@@ -44,8 +44,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Packs">Packs</a>
                         </li>
+
                     </ul>
                     <ul class="navbar-nav ml-auto">
 

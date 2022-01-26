@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using EntityLayer.Model
+@model List<Pack>
+
+
+<div class="col-lg-12">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-xl-4 col-md-6 col-sm-1">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        @item.pack_id
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <a class="small text-dark" href='@Url.Action("PackShow", "Home", new { id= item.pack_id})'>Show Pack</a>
+                        <a class="small text-dark" href='@Url.Action("AddPack", "Home", new { id= item.pack_id})'>Add Pack My Sentences</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

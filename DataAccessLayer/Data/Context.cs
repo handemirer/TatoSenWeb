@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using TatoSen.Model;
+using EntityLayer.Model;
 
-namespace TatoSen.Data
+namespace DataAccessLayer.Data
 {
     public class Context : DbContext
     {
@@ -23,10 +23,27 @@ namespace TatoSen.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Pack> Packs { get; set; }
         public DbSet<Sentence> Sentences { get; set; }
+        public DbSet<UserPack> UserPacks { get; set; }
+        public DbSet<Added> Addeds { get; set; }
+        public DbSet<UserSentence> UserSentences { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserPack>().HasKey(table => new
+            {
+                table.user_pack_id,
+                table.user_id,
+            });
+            modelBuilder.Entity<Added>().HasKey(table => new
+            {
+                table.pack_id,
+                table.user_id,
+            });
+            modelBuilder.Entity<UserSentence>().HasKey(table => new
+            {
+                table.user_sentence_id,
+            });
         }
 
         public static string connStrToArray()

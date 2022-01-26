@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Tatosen.Helpers;
-using TatoSen.Data;
+using DataAccessLayer.Data;
 using TatoSen.Service;
 
 namespace TatoSen

@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Tatosen.Services;
-using TatoSen.Data;
+using DataAccessLayer.Data;
 using TatoSen.Models;
 
 namespace TatoSen.Controllers

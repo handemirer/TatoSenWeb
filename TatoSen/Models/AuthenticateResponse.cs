@@ -1,4 +1,4 @@
-using TatoSen.Model;
+using EntityLayer.Model;
 
 namespace TatoSen.Models
 {

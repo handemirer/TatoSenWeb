@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TatoSen.Model
+namespace EntityLayer.Model
 {
     public class Sentence
     {

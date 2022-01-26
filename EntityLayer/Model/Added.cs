@@ -4,11 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TatoSen.Model
+namespace EntityLayer.Model
 {
-    public class Pack
+    public class Added
     {
         [Key]
         public int pack_id { get; set; }
+        [Key]
+        public int user_id { get; set; }
     }
 }

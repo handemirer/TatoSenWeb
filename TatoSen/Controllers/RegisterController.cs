@@ -6,8 +6,9 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using TatoSen.Data;
-using TatoSen.Model;
+using DataAccessLayer.Data;
+using EntityLayer.Model;
+using TatoSen.Models;
 
 namespace TatoSen.Controllers
 {
@@ -38,9 +39,13 @@ namespace TatoSen.Controllers
 
             Context context = new Context();
             context.Users.Add(user);
-            context.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            // TODO user packslerini oluştur
+            // context.SaveChanges();
+            ErrorViewModel error = new ErrorViewModel();
+            error.RequestId = "Register not available cause this website in develop state";
+            return RedirectToAction("Error", "Home", error);
+            //return RedirectToAction("Index", "Home");
             //return View();
         }
 

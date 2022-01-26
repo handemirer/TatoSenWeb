@@ -1,3 +1,25 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@using TatoSen.Model
+@model List<UserPackViewModel>
+
+
+<div class="col-lg-12">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+        <div class="col-xl-4 col-md-6 col-sm-1">
+            <div class="card mb-4">
+                <div class="card-body">
+                    @item.pack_name (@item.count)
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-dark" href='@Url.Action("Learn", "Home",new { id = item.user_pack_id})'>Learn</a>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+</div>
